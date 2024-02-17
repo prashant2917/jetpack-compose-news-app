@@ -1,4 +1,4 @@
-package com.pocket.newsapp.ui.theme
+package com.pocket.newsapp.base.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
