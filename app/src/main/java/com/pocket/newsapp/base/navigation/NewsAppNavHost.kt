@@ -5,7 +5,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.pocket.newsapp.home.HomeScreenRoute
+import com.pocket.newsapp.home.presentation.HomeScreenRoute
 
 @Composable
 fun NewsAppNavHost() {

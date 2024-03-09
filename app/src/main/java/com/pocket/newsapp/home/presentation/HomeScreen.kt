@@ -1,4 +1,4 @@
-package com.pocket.newsapp.home
+package com.pocket.newsapp.home.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -14,7 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import com.pocket.newsapp.R
 import com.pocket.newsapp.base.navigation.Route
-import com.pocket.newsapp.base.ui.TitleButton
+import com.pocket.newsapp.base.ui.presentation.TitleButton
 
 @Composable
 fun HomeScreenRoute(navController: NavController) {

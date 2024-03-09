@@ -1,4 +1,4 @@
-package com.pocket.newsapp.base.ui
+package com.pocket.newsapp.base.ui.presentation
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
