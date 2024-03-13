@@ -1,6 +1,11 @@
 package com.pocket.newsapp.di.module
 
 import android.content.Context
+import androidx.room.Room
+import androidx.work.WorkManager
+import com.pocket.newsapp.local.data.AppDatabaseService
+import com.pocket.newsapp.local.data.DatabaseService
+import com.pocket.newsapp.local.data.NewsAppDatabase
 import com.pocket.newsapp.network.ApiKeyInterceptor
 import com.pocket.newsapp.network.NetworkService
 import com.pocket.newsapp.utils.AppConstants
@@ -77,5 +82,36 @@ class ApplicationModule {
     @NetworkAPIKey
     @Provides
     fun provideApiKey(): String = AppConstants.API_KEY
+
+    @Provides
+    @Singleton
+    fun provideDatabaseService(appDatabase: NewsAppDatabase): DatabaseService {
+        return AppDatabaseService(appDatabase)
+    }
+
+    @DatabaseName
+    @Provides
+    fun provideDatabaseName(): String = AppConstants.DATABASE_NAME
+
+    @Provides
+    @Singleton
+    fun provideAppDatabase(
+        @ApplicationContext context: Context,
+        @DatabaseName databaseName: String
+    ): NewsAppDatabase {
+        return Room.databaseBuilder(
+            context,
+            NewsAppDatabase::class.java,
+            databaseName
+        ).build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideWorkManager(
+        @ApplicationContext context: Context
+    ): WorkManager {
+        return WorkManager.getInstance(context)
+    }
 
 }

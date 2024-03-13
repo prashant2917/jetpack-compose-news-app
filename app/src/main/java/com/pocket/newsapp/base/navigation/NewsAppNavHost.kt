@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.pocket.newsapp.home.presentation.HomeScreenRoute
+import com.pocket.newsapp.offline.OfflineTopHeadlineRoute
 import com.pocket.newsapp.topheadlines.presentation.TopHeadlineRoute
 import com.pocket.newsapp.utils.openCustomChromeTab
 
@@ -18,11 +19,19 @@ fun NewsAppNavHost() {
         composable(Route.HomeScreen.name) {
             HomeScreenRoute(navController = navController)
         }
-        
+
         composable(Route.TopHeadline.name) {
-            TopHeadlineRoute(onNewsClick =  {
-                openCustomChromeTab(context,  it)
+            TopHeadlineRoute(onNewsClick = {
+                openCustomChromeTab(context, it)
             })
+        }
+
+        composable(Route.OfflineTopHeadline.name) {
+            OfflineTopHeadlineRoute(onNewsClick = {
+                openCustomChromeTab(context, it)
+            }
+
+            )
         }
     }
 }
