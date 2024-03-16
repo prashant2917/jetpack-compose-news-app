@@ -4,6 +4,31 @@
 
 **Technologies Used -**  Kotlin, Retrofit, MVVM architecture
 
+
+**Migrate XML project to jetpack compose**
+
+* Update Android Gradle Plugin and Kotlin Plugin: Using the latest versions of the Android Gradle Plugin and Kotlin Plugin.
+
+* Add Compose Dependencies: build.gradle (module-level)
+
+* Set Up Compose Application: Create a new @Composable function
+
+* Replace XML Layouts with Compose Code: For example, if you had an XML layout with a TextView, replace it with a Compose Text element.
+
+* Adopt Compose Components: Replace XML-based UI components with their Compose equivalents.
+
+* Integrate Compose Navigation: Migrate from XML-based navigation to Compose Navigation.
+
+* Migrate UI Logic: Update UI logic to use Compose's state management.
+
+* Migrate Resources: Migrate string resources, colors, drawable.
+
+* Update Gradle Plugin Versions: Update your Gradle dependencies accordingly.
+
+* Testing: Write tests for your Compose UI using the Compose testing library.
+
+* Documentation and Learning: - Refer to the official Jetpack Compose documentation and samples. Learn about Compose concepts like Composables, state management, and navigation
+
 **Libraries Used -**
 
     implementation("androidx.core:core-ktx:1.12.0")
