@@ -58,7 +58,7 @@ fun HomeScreen(navController: NavController) {
 
         TitleButton(stringResource(R.string.news_sources), navController, Route.NewsSources.name)
 
-        TitleButton(stringResource(R.string.coutries), navController, Route.CountryList.name)
+        TitleButton(stringResource(R.string.countries), navController, Route.CountryList.name)
 
         TitleButton(stringResource(R.string.language), navController, Route.LanguageList.name)
 
